@@ -44,11 +44,11 @@ def gameLoop(sock):
       clients_lock.acquire()
       print (clients)
       for c in clients:
-         player = {}
-         clients[c]['color'] = {"R": random.random(), "G": random.random(), "B": random.random()}
-         player['id'] = str(c)
-         player['color'] = clients[c]['color']
-         GameState['players'].append(player)
+         Player = {}
+         clients[c]['color'] = {"r": random.random(), "g": random.random(), "b": random.random()}
+         Player['id'] = str(c)
+         Player['color'] = clients[c]['color']
+         GameState['players'].append(Player)
       s=json.dumps(GameState)
       print(s)
       for c in clients:
