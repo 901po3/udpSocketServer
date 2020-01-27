@@ -45,7 +45,7 @@ def gameLoop(sock):
       print (clients)
       for c in clients:
          Player = {}
-         clients[c]['color'] = {"r": random.random(), "g": random.random(), "b": random.random()}
+         clients[c]['color'] = {"r": random.random(), "g": random.random(), "b": random.random()} #dlksjldksa
          Player['id'] = str(c)
          Player['color'] = clients[c]['color']
          GameState['players'].append(Player)
